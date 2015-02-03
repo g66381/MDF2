@@ -14,6 +14,7 @@
 		28B963C21A815AFB00A63D6B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28B963C11A815AFB00A63D6B /* Images.xcassets */; };
 		28B963C51A815AFB00A63D6B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28B963C31A815AFB00A63D6B /* LaunchScreen.xib */; };
 		28B963D11A815AFB00A63D6B /* MDF2_Project1Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 28B963D01A815AFB00A63D6B /* MDF2_Project1Tests.m */; };
+		28B963DB1A815C6F00A63D6B /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28B963DA1A815C6F00A63D6B /* Accounts.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		28B963CA1A815AFB00A63D6B /* MDF2_Project1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MDF2_Project1Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		28B963CF1A815AFB00A63D6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		28B963D01A815AFB00A63D6B /* MDF2_Project1Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MDF2_Project1Tests.m; sourceTree = "<group>"; };
+		28B963DA1A815C6F00A63D6B /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28B963DB1A815C6F00A63D6B /* Accounts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +66,7 @@
 		28B963A81A815AFB00A63D6B = {
 			isa = PBXGroup;
 			children = (
+				28B963DA1A815C6F00A63D6B /* Accounts.framework */,
 				28B963B31A815AFB00A63D6B /* MDF2_Project1 */,
 				28B963CD1A815AFB00A63D6B /* MDF2_Project1Tests */,
 				28B963B21A815AFB00A63D6B /* Products */,
