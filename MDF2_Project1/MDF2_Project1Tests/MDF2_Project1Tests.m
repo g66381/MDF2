@@ -1,6 +1,6 @@
 //
-//  testTests.m
-//  testTests
+//  MDF2_Project1Tests.m
+//  MDF2_Project1Tests
 //
 //  Created by Johnny Kay on 2/3/15.
 //  Copyright (c) 2015 Johnny Kay. All rights reserved.
@@ -9,11 +9,11 @@
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 
-@interface testTests : XCTestCase
+@interface MDF2_Project1Tests : XCTestCase
 
 @end
 
-@implementation testTests
+@implementation MDF2_Project1Tests
 
 - (void)setUp {
     [super setUp];

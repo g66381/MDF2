@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "28B9637E1A81580700A63D6B"
-               BuildableName = "test.app"
-               BlueprintName = "test"
-               ReferencedContainer = "container:test.xcodeproj">
+               BlueprintIdentifier = "28B963B01A815AFB00A63D6B"
+               BuildableName = "MDF2_Project1.app"
+               BlueprintName = "MDF2_Project1"
+               ReferencedContainer = "container:MDF2_Project1.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -28,10 +28,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "28B963971A81580700A63D6B"
-               BuildableName = "testTests.xctest"
-               BlueprintName = "testTests"
-               ReferencedContainer = "container:test.xcodeproj">
+               BlueprintIdentifier = "28B963C91A815AFB00A63D6B"
+               BuildableName = "MDF2_Project1Tests.xctest"
+               BlueprintName = "MDF2_Project1Tests"
+               ReferencedContainer = "container:MDF2_Project1.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -46,20 +46,20 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "28B963971A81580700A63D6B"
-               BuildableName = "testTests.xctest"
-               BlueprintName = "testTests"
-               ReferencedContainer = "container:test.xcodeproj">
+               BlueprintIdentifier = "28B963C91A815AFB00A63D6B"
+               BuildableName = "MDF2_Project1Tests.xctest"
+               BlueprintName = "MDF2_Project1Tests"
+               ReferencedContainer = "container:MDF2_Project1.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "28B9637E1A81580700A63D6B"
-            BuildableName = "test.app"
-            BlueprintName = "test"
-            ReferencedContainer = "container:test.xcodeproj">
+            BlueprintIdentifier = "28B963B01A815AFB00A63D6B"
+            BuildableName = "MDF2_Project1.app"
+            BlueprintName = "MDF2_Project1"
+            ReferencedContainer = "container:MDF2_Project1.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -75,10 +75,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "28B9637E1A81580700A63D6B"
-            BuildableName = "test.app"
-            BlueprintName = "test"
-            ReferencedContainer = "container:test.xcodeproj">
+            BlueprintIdentifier = "28B963B01A815AFB00A63D6B"
+            BuildableName = "MDF2_Project1.app"
+            BlueprintName = "MDF2_Project1"
+            ReferencedContainer = "container:MDF2_Project1.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -93,10 +93,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "28B9637E1A81580700A63D6B"
-            BuildableName = "test.app"
-            BlueprintName = "test"
-            ReferencedContainer = "container:test.xcodeproj">
+            BlueprintIdentifier = "28B963B01A815AFB00A63D6B"
+            BuildableName = "MDF2_Project1.app"
+            BlueprintName = "MDF2_Project1"
+            ReferencedContainer = "container:MDF2_Project1.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

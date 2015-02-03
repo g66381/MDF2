@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>test.xcscheme</key>
+		<key>MDF2_Project1.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,12 +12,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>28B9637E1A81580700A63D6B</key>
+		<key>28B963B01A815AFB00A63D6B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>28B963971A81580700A63D6B</key>
+		<key>28B963C91A815AFB00A63D6B</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -1,6 +1,6 @@
 //
 //  main.m
-//  test
+//  MDF2_Project1
 //
 //  Created by Johnny Kay on 2/3/15.
 //  Copyright (c) 2015 Johnny Kay. All rights reserved.
