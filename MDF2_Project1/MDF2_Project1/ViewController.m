@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import <Accounts/Accounts.h>
+#import <Social/Social.h>
 
 @interface ViewController ()
 
@@ -16,6 +17,15 @@
 @implementation ViewController
 
 - (void)viewDidLoad {
+    
+    [self RefreshTwit];
+    
+    [super viewDidLoad];
+    // Do any additional setup after loading the view, typically from a nib.
+}
+
+- (void)RefreshTwit
+{
     
     ACAccountStore *accountStore = [[ACAccountStore alloc] init];
     if (accountStore != nil) {
@@ -31,6 +41,25 @@
                         ACAccount *curAcnt = [twitAcnts objectAtIndex:0];
                         if (curAcnt != nil) {
                             user.text = (curAcnt.username);
+                            
+                            NSString *requestUrl = @"https://api.twitter.com/1.1/statuses/user_timeline.json";
+                            
+                            SLRequest *request = [SLRequest requestForServiceType:SLServiceTypeTwitter requestMethod:SLRequestMethodGET URL:[NSURL URLWithString:requestUrl] parameters:nil];
+                            
+                            [request setAccount:curAcnt];
+                            
+                            [request performRequestWithHandler:^(NSData *responseData, NSHTTPURLResponse *urlResponse, NSError *error) {
+                                
+                                if ((error == nil) && ([urlResponse statusCode] == 200)){
+                                    
+                                    NSArray *twitFeed = [NSJSONSerialization JSONObjectWithData:responseData options:0 error:nil];
+                                    
+                                    NSLog(@"response = %@", [twitFeed description]);
+                                    
+                                }
+    
+                            }];
+                            
                         }
                     }
                     
@@ -42,8 +71,6 @@
         }
     }
     
-    [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)didReceiveMemoryWarning {
