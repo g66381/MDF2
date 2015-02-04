@@ -16,6 +16,8 @@
 		28B963D11A815AFB00A63D6B /* MDF2_Project1Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 28B963D01A815AFB00A63D6B /* MDF2_Project1Tests.m */; };
 		28B963DB1A815C6F00A63D6B /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28B963DA1A815C6F00A63D6B /* Accounts.framework */; };
 		28B963DD1A816D2F00A63D6B /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28B963DC1A816D2F00A63D6B /* Social.framework */; };
+		28B963E11A817C2200A63D6B /* PostInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 28B963E01A817C2200A63D6B /* PostInfo.m */; };
+		28B963E41A818E3F00A63D6B /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 28B963E31A818E3F00A63D6B /* CustomTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,10 @@
 		28B963D01A815AFB00A63D6B /* MDF2_Project1Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MDF2_Project1Tests.m; sourceTree = "<group>"; };
 		28B963DA1A815C6F00A63D6B /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		28B963DC1A816D2F00A63D6B /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		28B963DF1A817C2200A63D6B /* PostInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostInfo.h; sourceTree = "<group>"; };
+		28B963E01A817C2200A63D6B /* PostInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostInfo.m; sourceTree = "<group>"; };
+		28B963E21A818E3F00A63D6B /* CustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableViewCell.h; sourceTree = "<group>"; };
+		28B963E31A818E3F00A63D6B /* CustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,8 +75,7 @@
 		28B963A81A815AFB00A63D6B = {
 			isa = PBXGroup;
 			children = (
-				28B963DC1A816D2F00A63D6B /* Social.framework */,
-				28B963DA1A815C6F00A63D6B /* Accounts.framework */,
+				28B963DE1A817BB900A63D6B /* Frameworks */,
 				28B963B31A815AFB00A63D6B /* MDF2_Project1 */,
 				28B963CD1A815AFB00A63D6B /* MDF2_Project1Tests */,
 				28B963B21A815AFB00A63D6B /* Products */,
@@ -97,6 +102,10 @@
 				28B963C11A815AFB00A63D6B /* Images.xcassets */,
 				28B963C31A815AFB00A63D6B /* LaunchScreen.xib */,
 				28B963B41A815AFB00A63D6B /* Supporting Files */,
+				28B963DF1A817C2200A63D6B /* PostInfo.h */,
+				28B963E01A817C2200A63D6B /* PostInfo.m */,
+				28B963E21A818E3F00A63D6B /* CustomTableViewCell.h */,
+				28B963E31A818E3F00A63D6B /* CustomTableViewCell.m */,
 			);
 			path = MDF2_Project1;
 			sourceTree = "<group>";
@@ -125,6 +134,15 @@
 				28B963CF1A815AFB00A63D6B /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		28B963DE1A817BB900A63D6B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				28B963DC1A816D2F00A63D6B /* Social.framework */,
+				28B963DA1A815C6F00A63D6B /* Accounts.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,6 +248,8 @@
 				28B963BD1A815AFB00A63D6B /* ViewController.m in Sources */,
 				28B963BA1A815AFB00A63D6B /* AppDelegate.m in Sources */,
 				28B963B71A815AFB00A63D6B /* main.m in Sources */,
+				28B963E41A818E3F00A63D6B /* CustomTableViewCell.m in Sources */,
+				28B963E11A817C2200A63D6B /* PostInfo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
