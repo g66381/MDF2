@@ -11,7 +11,6 @@
 #import <Social/Social.h>
 
 #import "PostInfo.h"
-#import "CustomTableViewCell.h"
 
 @interface ViewController ()
 
@@ -100,34 +99,6 @@
     return postInf;
 }
 
-// Required for table view
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return [twitterPosts count];
-}
-
-// Loads information to custom cells in table
-- (UITableViewCell *)tblView:(UITableView *)tblView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    
-    CustomTableViewCell *cell = [tblView dequeueReusableCellWithIdentifier:@"myCell"];
-    if (cell != nil) {
-        PostInfo *currentItem = [twitterPosts objectAtIndex:indexPath.row];
-        
-        [cell refresh:currentItem.userName secondStrng:currentItem.tweetTxt thirdStrng:currentItem.date];
-    }
-    return cell;
-}
-
-// Required for table view
-- (void)tblView:(UITableView *)tblView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        [twitterPosts removeObjectAtIndex:indexPath.row];
-        
-        [tblView deleteRowsAtIndexPaths:[NSArray arrayWithObjects:indexPath, nil] withRowAnimation:UITableViewRowAnimationAutomatic];
-    }
-}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

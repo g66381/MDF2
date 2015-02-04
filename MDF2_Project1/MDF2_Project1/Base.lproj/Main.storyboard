@@ -46,10 +46,6 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="Bhg-jp-u1b"/>
-                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="9BZ-c3-b1w"/>
-                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.31013405640922898" green="0.77447923265061924" blue="1" alpha="1" colorSpace="calibratedRGB"/>
