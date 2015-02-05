@@ -17,6 +17,9 @@
 		28B963DB1A815C6F00A63D6B /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28B963DA1A815C6F00A63D6B /* Accounts.framework */; };
 		28B963DD1A816D2F00A63D6B /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28B963DC1A816D2F00A63D6B /* Social.framework */; };
 		28B963E11A817C2200A63D6B /* PostInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 28B963E01A817C2200A63D6B /* PostInfo.m */; };
+		28B963EA1A83DF6D00A63D6B /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 28B963E91A83DF6D00A63D6B /* CustomTableViewCell.m */; };
+		28B963ED1A840C5200A63D6B /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28B963EC1A840C5200A63D6B /* ProfileViewController.m */; };
+		28B963F01A840D3C00A63D6B /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28B963EF1A840D3C00A63D6B /* DetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,12 @@
 		28B963DC1A816D2F00A63D6B /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		28B963DF1A817C2200A63D6B /* PostInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostInfo.h; sourceTree = "<group>"; };
 		28B963E01A817C2200A63D6B /* PostInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostInfo.m; sourceTree = "<group>"; };
+		28B963E81A83DF6D00A63D6B /* CustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableViewCell.h; sourceTree = "<group>"; };
+		28B963E91A83DF6D00A63D6B /* CustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewCell.m; sourceTree = "<group>"; };
+		28B963EB1A840C5200A63D6B /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		28B963EC1A840C5200A63D6B /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		28B963EE1A840D3C00A63D6B /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		28B963EF1A840D3C00A63D6B /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,12 +104,18 @@
 				28B963B91A815AFB00A63D6B /* AppDelegate.m */,
 				28B963BB1A815AFB00A63D6B /* ViewController.h */,
 				28B963BC1A815AFB00A63D6B /* ViewController.m */,
+				28B963EB1A840C5200A63D6B /* ProfileViewController.h */,
+				28B963EC1A840C5200A63D6B /* ProfileViewController.m */,
+				28B963EE1A840D3C00A63D6B /* DetailViewController.h */,
+				28B963EF1A840D3C00A63D6B /* DetailViewController.m */,
 				28B963BE1A815AFB00A63D6B /* Main.storyboard */,
 				28B963C11A815AFB00A63D6B /* Images.xcassets */,
 				28B963C31A815AFB00A63D6B /* LaunchScreen.xib */,
 				28B963B41A815AFB00A63D6B /* Supporting Files */,
 				28B963DF1A817C2200A63D6B /* PostInfo.h */,
 				28B963E01A817C2200A63D6B /* PostInfo.m */,
+				28B963E81A83DF6D00A63D6B /* CustomTableViewCell.h */,
+				28B963E91A83DF6D00A63D6B /* CustomTableViewCell.m */,
 			);
 			path = MDF2_Project1;
 			sourceTree = "<group>";
@@ -243,7 +258,10 @@
 				28B963BD1A815AFB00A63D6B /* ViewController.m in Sources */,
 				28B963BA1A815AFB00A63D6B /* AppDelegate.m in Sources */,
 				28B963B71A815AFB00A63D6B /* main.m in Sources */,
+				28B963EA1A83DF6D00A63D6B /* CustomTableViewCell.m in Sources */,
+				28B963ED1A840C5200A63D6B /* ProfileViewController.m in Sources */,
 				28B963E11A817C2200A63D6B /* PostInfo.m in Sources */,
+				28B963F01A840D3C00A63D6B /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

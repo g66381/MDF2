@@ -19,7 +19,7 @@
 }
 
 @property (nonatomic, readonly)NSString *date;
-@property (nonatomic, readonly)NSString *profileImg;
+@property (nonatomic, strong)NSString *profileImg;
 @property (nonatomic, readonly)NSString *userName;
 @property (nonatomic, readonly)NSString *userDescription;
 @property (nonatomic, readonly)NSString *tweetTxt;

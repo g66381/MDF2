@@ -8,14 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 {
     NSMutableArray *twitterPosts;
-    
-    IBOutlet UITableView *tableView;
     
     IBOutlet UILabel *user;
 }
 
+-(IBAction)onClick:(id)sender;
+
+@property IBOutlet UITableView *timelineTbl;
 @end
 

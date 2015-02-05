@@ -7,10 +7,12 @@
 //
 
 #import "ViewController.h"
+#import "PostInfo.h"
+#import "CustomTableViewCell.h"
+#import "ProfileViewController.h"
+#import "DetailViewController.h"
 #import <Accounts/Accounts.h>
 #import <Social/Social.h>
-
-#import "PostInfo.h"
 
 @interface ViewController ()
 
@@ -20,11 +22,29 @@
 
 - (void)viewDidLoad {
     
-    [self RefreshTwit];
     twitterPosts = [[NSMutableArray alloc] init];
+    [self RefreshTwit];
     
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [twitterPosts count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    CustomTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"myCell"];
+    if (cell != nil) {
+        PostInfo *currentItem = [twitterPosts objectAtIndex:indexPath.row];
+        
+        cell.tweet.text = currentItem.tweetTxt;
+        
+    }
+    return cell;
+
 }
 
 - (void)RefreshTwit
@@ -64,7 +84,9 @@
                                             [twitterPosts addObject:feedInfo];
                                         }
                                     }
-                                    
+                                    dispatch_async(dispatch_get_main_queue(), ^{
+                                        [self.timelineTbl reloadData];
+                                    });
                                 }
     
                             }];
@@ -84,6 +106,15 @@
     
 }
 
+
+-(IBAction)onClick:(id)sender
+{
+    SLComposeViewController *composeView = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
+    
+    [composeView setInitialText:@"Post from MDF2_Project1:"];
+    [self presentViewController:composeView animated:true completion:nil];
+}
+
 - (PostInfo *) createPostInfoFromDictionary:(NSDictionary *)postDict
 {
     NSString *timeDateStrng = [postDict valueForKey:@"created_at"];
@@ -98,6 +129,20 @@
     
     return postInf;
 }
+
+//// Sending information to second view controller for details
+//-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+//{
+//    DetailViewController *detailVC = segue.destinationViewController;
+//    if (detailVC != nil) {
+//        UITableViewCell *cell = (UITableViewCell *)sender;
+//        NSIndexPath *indexPath = [_timelineTbl indexPathForCell:cell];
+//        
+//        PostInfo *currentItem = [twitterPosts objectAtIndex:indexPath.row];
+//        
+//        detailVC.currentItem = currentItem;
+//    }
+//}
 
 
 - (void)didReceiveMemoryWarning {
