@@ -29,7 +29,7 @@
     
 }
 
-// Closing second view back to table view
+// Closes view back to table view
 -(IBAction)close:(id)sender
 {
     [self dismissViewControllerAnimated:YES completion:nil];

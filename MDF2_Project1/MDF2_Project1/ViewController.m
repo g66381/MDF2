@@ -22,24 +22,28 @@
 
 - (void)viewDidLoad {
     
+    // Holds timeline info from api
     twitterPosts = [[NSMutableArray alloc] init];
     [self RefreshTwit];
     
+    // Alerts while timeline loading
     reloadAlert = [[UIAlertView alloc] initWithTitle:@"Timeline Loading"
-                                                    message:nil
-                                                   delegate:nil
-                                          cancelButtonTitle:nil
-                                          otherButtonTitles:nil];
+        message:nil
+        delegate:nil
+        cancelButtonTitle:nil
+        otherButtonTitles:nil];
     
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
+// Required for tableview
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return [twitterPosts count];
 }
 
+// Required for tableview
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     CustomTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"myCell"];
@@ -119,6 +123,7 @@
 }
 
 
+// Compose new tweet
 -(IBAction)onClick:(id)sender
 {
     SLComposeViewController *composeView = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
@@ -127,6 +132,7 @@
     [self presentViewController:composeView animated:true completion:nil];
 }
 
+// Copies api data to custom object
 - (PostInfo *) createPostInfoFromDictionary:(NSDictionary *)postDict
 {
     NSString *timeDateStrng = [postDict valueForKey:@"created_at"];
@@ -145,9 +151,10 @@
     return postInf;
 }
 
-// Sending information to second view controller for details
+// Sending information to different view controller for details
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    // Sends to Detail View Controller
     DetailViewController *detailVC = segue.destinationViewController;
     if (detailVC != nil) {
         UITableViewCell *cell = (UITableViewCell *)sender;
@@ -158,6 +165,7 @@
         detailVC.currentItem = currentItem;
     }
     
+    // Sends to Profile View Controller
     ProfileViewController *profileVC = segue.destinationViewController;
     if (profileVC != nil) {
         UITableViewCell *cell = (UITableViewCell *)sender;
@@ -170,6 +178,7 @@
     
 }
 
+// Loads refresh and alert during refresh
 -(IBAction)refresh:(id)sender
 {
     [reloadAlert show];
