@@ -7,6 +7,7 @@
 //
 
 #import "ProfileViewController.h"
+#import "PostInfo.h"
 
 @interface ProfileViewController ()
 
@@ -15,6 +16,13 @@
 @implementation ProfileViewController
 
 - (void)viewDidLoad {
+    
+    followersLbl.text = [self.currentItem.myFollowers stringValue];
+    friendsLbl.text = [self.currentItem.myFriends stringValue];
+    user.text = self.currentItem.userName;
+    desc.text = self.currentItem.userDescription;
+    name.text = self.currentItem.myName;
+    
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }

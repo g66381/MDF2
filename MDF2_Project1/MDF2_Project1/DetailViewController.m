@@ -22,9 +22,10 @@
 // Loads passed information into second view
 -(void)viewWillAppear:(BOOL)animated
 {
-    date.text = self.currentItem.date;
-    user.text = self.currentItem.userName;
-    tweet.text = self.currentItem.tweetTxt;
+
+    userLbl.text = self.currentItem.userName;
+    tweetLbl.text = self.currentItem.tweetTxt;
+    dateLbl.text = self.currentItem.date;
     
 }
 

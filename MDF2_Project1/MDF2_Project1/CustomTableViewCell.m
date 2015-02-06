@@ -9,6 +9,7 @@
 #import "CustomTableViewCell.h"
 
 @implementation CustomTableViewCell
+@synthesize date, tweet, icon;
 
 - (void)awakeFromNib {
     // Initialization code
@@ -23,9 +24,9 @@
 // Refreshes information in table view
 -(void)refresh:(NSString *)firstStrng secondStrng:(NSString *)secondStrng thirdStrng:(NSString *)thirdStrng
 {
-    _date.text = firstStrng;
-    _tweet.text = secondStrng;
-    _icon.image = thirdStrng;
+    date.text = firstStrng;
+    tweet.text = secondStrng;
+    icon.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:thirdStrng]]];
 }
 
 @end

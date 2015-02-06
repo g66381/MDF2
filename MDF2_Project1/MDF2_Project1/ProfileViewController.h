@@ -7,12 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PostInfo.h"
 
 @interface ProfileViewController : UIViewController
 {
+    
+    IBOutlet UILabel *followersLbl;
+    IBOutlet UILabel *friendsLbl;
+    IBOutlet UILabel *user;
+    IBOutlet UITextView *desc;
+    IBOutlet UILabel *name;
     
 }
 
 -(IBAction)close:(id)sender;
 
+@property (nonatomic, strong)PostInfo *currentItem;
 @end

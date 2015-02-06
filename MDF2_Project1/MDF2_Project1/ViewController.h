@@ -13,9 +13,13 @@
     NSMutableArray *twitterPosts;
     
     IBOutlet UILabel *user;
+    UIAlertView *reloadAlert;
+    
 }
 
 -(IBAction)onClick:(id)sender;
+
+-(IBAction)refresh:(id)sender;
 
 @property IBOutlet UITableView *timelineTbl;
 @end

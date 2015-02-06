@@ -11,9 +11,9 @@
 
 @interface DetailViewController : UIViewController
 {
-    IBOutlet UILabel *date;
-    IBOutlet UILabel *user;
-    IBOutlet UITextView *tweet;
+    IBOutlet UILabel *userLbl;
+    IBOutlet UITextView *tweetLbl;
+    IBOutlet UILabel *dateLbl;
     
 }
 

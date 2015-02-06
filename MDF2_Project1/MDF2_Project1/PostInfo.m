@@ -9,12 +9,15 @@
 #import "PostInfo.h"
 
 @implementation PostInfo
-@synthesize date, profileImg, userName, userDescription, tweetTxt;
+@synthesize myName, myFollowers, myFriends, date, profileImg, userName, userDescription, tweetTxt;
 
-- (id)initWithPostInfo:(NSString *)screenName img:(NSString *)img userDesc:(NSString *)userDesc text:(NSString *)text timeDateInfo:(NSString *)timeDateInfo;
+- (id)initWithPostInfo:(NSString *)screenName myName:(NSString *)name myFollowers:(NSNumber *)followers myFriends:(NSNumber *)friends img:(NSString *)img userDesc:(NSString *)userDesc text:(NSString *)text timeDateInfo:(NSString *)timeDateInfo;
 {
     if ((self = [super init])) {
 
+        myName = [name copy];
+        myFollowers = [followers copy];
+        myFriends = [friends copy];
         userName = [screenName copy];
         userDescription = [userDesc copy];
         tweetTxt = [text copy];

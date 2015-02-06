@@ -25,6 +25,12 @@
     twitterPosts = [[NSMutableArray alloc] init];
     [self RefreshTwit];
     
+    reloadAlert = [[UIAlertView alloc] initWithTitle:@"Timeline Loading"
+                                                    message:nil
+                                                   delegate:nil
+                                          cancelButtonTitle:nil
+                                          otherButtonTitles:nil];
+    
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 }
@@ -41,6 +47,8 @@
         PostInfo *currentItem = [twitterPosts objectAtIndex:indexPath.row];
         
         cell.tweet.text = currentItem.tweetTxt;
+        cell.date.text = currentItem.date;
+        cell.icon.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:currentItem.profileImg]]];
         
     }
     return cell;
@@ -84,9 +92,13 @@
                                             [twitterPosts addObject:feedInfo];
                                         }
                                     }
+                                    
+                                    NSLog(@"%@", [twitFeed description]);
+                                    
                                     dispatch_async(dispatch_get_main_queue(), ^{
                                         [self.timelineTbl reloadData];
                                     });
+                                    
                                 }
     
                             }];
@@ -121,28 +133,50 @@
     NSString *tweetTxt = [postDict valueForKey:@"text"];
     
     NSDictionary *userDict = [postDict objectForKey:@"user"];
+    NSString *name = [userDict objectForKey:@"name"];
+    NSNumber *followers = [userDict valueForKey:@"followers_count"];
+    NSNumber *friends = [userDict valueForKey:@"friends_count"];
     NSString *userImg = [userDict objectForKey:@"profile_image_url"];
     NSString *userSN = [userDict objectForKey:@"screen_name"];
     NSString *userDesc = [userDict objectForKey:@"description"];
     
-    PostInfo *postInf = [[PostInfo alloc] initWithPostInfo:userSN img:userImg userDesc:userDesc text:tweetTxt timeDateInfo:timeDateStrng];
+    PostInfo *postInf = [[PostInfo alloc] initWithPostInfo:userSN myName:name myFollowers:followers myFriends:friends img:userImg userDesc:userDesc text:tweetTxt timeDateInfo:timeDateStrng];
     
     return postInf;
 }
 
-//// Sending information to second view controller for details
-//-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-//{
-//    DetailViewController *detailVC = segue.destinationViewController;
-//    if (detailVC != nil) {
-//        UITableViewCell *cell = (UITableViewCell *)sender;
-//        NSIndexPath *indexPath = [_timelineTbl indexPathForCell:cell];
-//        
-//        PostInfo *currentItem = [twitterPosts objectAtIndex:indexPath.row];
-//        
-//        detailVC.currentItem = currentItem;
-//    }
-//}
+// Sending information to second view controller for details
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    DetailViewController *detailVC = segue.destinationViewController;
+    if (detailVC != nil) {
+        UITableViewCell *cell = (UITableViewCell *)sender;
+        NSIndexPath *indexPath = [_timelineTbl indexPathForCell:cell];
+        
+        PostInfo *currentItem = [twitterPosts objectAtIndex:indexPath.row];
+        
+        detailVC.currentItem = currentItem;
+    }
+    
+    ProfileViewController *profileVC = segue.destinationViewController;
+    if (profileVC != nil) {
+        UITableViewCell *cell = (UITableViewCell *)sender;
+        NSIndexPath *indexPath = [_timelineTbl indexPathForCell:cell];
+        
+        PostInfo *currentItem = [twitterPosts objectAtIndex:indexPath.row];
+        
+        profileVC.currentItem = currentItem;
+    }
+    
+}
+
+-(IBAction)refresh:(id)sender
+{
+    [reloadAlert show];
+    [twitterPosts removeAllObjects];
+    [self RefreshTwit];
+    [reloadAlert dismissWithClickedButtonIndex:0 animated:true];
+}
 
 
 - (void)didReceiveMemoryWarning {

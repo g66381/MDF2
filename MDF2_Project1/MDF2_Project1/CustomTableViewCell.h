@@ -10,12 +10,15 @@
 
 @interface CustomTableViewCell : UITableViewCell
 {
+    IBOutlet UIImageView *icon;
+    IBOutlet UILabel *date;
+    IBOutlet UITextView *tweet;
     
 }
 
 -(void)refresh:(NSString *)firstStrng secondStrng:(NSString *)secondStrng thirdStrng:(NSString *)thirdStrng;
 
-@property IBOutlet UIImageView *icon;
-@property IBOutlet UILabel *date;
-@property IBOutlet UITextView *tweet;
+@property UIImageView *icon;
+@property UILabel *date;
+@property UITextView *tweet;
 @end
