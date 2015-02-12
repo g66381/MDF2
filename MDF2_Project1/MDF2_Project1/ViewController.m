@@ -90,14 +90,13 @@
                                     
                                     // Loops through twitter feed
                                     for (NSInteger i=0; i<[twitFeed count]; i++) {
+                                        NSLog(@"%@", twitFeed);
                                         PostInfo *feedInfo = [self createPostInfoFromDictionary:[twitFeed objectAtIndex:i]];
                                         
                                         if (feedInfo != nil) {
                                             [twitterPosts addObject:feedInfo];
                                         }
                                     }
-                                    
-                                    NSLog(@"%@", [twitFeed description]);
                                     
                                     dispatch_async(dispatch_get_main_queue(), ^{
                                         [self.timelineTbl reloadData];
@@ -130,6 +129,7 @@
     
     [composeView setInitialText:@"Post from MDF2_Project1:"];
     [self presentViewController:composeView animated:true completion:nil];
+    
 }
 
 // Copies api data to custom object
