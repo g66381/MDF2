@@ -10,5 +10,12 @@
 #import "FollowerInfo.h"
 
 @interface DetailViewController : UIViewController
+{
+    IBOutlet UILabel *screenName;
+    IBOutlet UIImageView *avatar;
+}
 
+-(IBAction)close:(id)sender;
+
+@property (nonatomic, strong)FollowerInfo *currentItem;
 @end

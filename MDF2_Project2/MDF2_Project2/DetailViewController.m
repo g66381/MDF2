@@ -19,6 +19,21 @@
     // Do any additional setup after loading the view.
 }
 
+// Loads passed information into second view
+-(void)viewWillAppear:(BOOL)animated
+{
+    
+    screenName.text = self.currentItem.userName;
+    avatar.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:_currentItem.profileImg]]];
+    
+}
+
+// Closes view back to table view
+-(IBAction)close:(id)sender
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

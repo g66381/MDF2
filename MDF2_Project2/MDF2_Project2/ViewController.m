@@ -88,9 +88,6 @@
                                             [followerInfo addObject:friendInfo];
                                         }
                                     }
-
-                                    
-                                    //NSLog(@"%@", friendsArray);
                                     
                                     dispatch_async(dispatch_get_main_queue(), ^{
                                         [self.collectView reloadData];
@@ -108,7 +105,7 @@
                     
                     // User did not allow account access
                     errorAlert = [[UIAlertView alloc] initWithTitle:@"Account Access Not Granted"
-                        message:@"Wee need access to your Twitter account in order to load your friends."
+                        message:@"We need access to your Twitter account in order to load your friends."
                         delegate:nil
                         cancelButtonTitle:@"Okay"
                         otherButtonTitles:nil];
@@ -135,6 +132,21 @@
     FollowerInfo *info = [[FollowerInfo alloc] initWithFollowerInfo:userSN img:userImg];
     
     return info;
+}
+
+// Sending information to different view controller for details
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    // Sends to Detail View Controller
+    DetailViewController *detailVC = segue.destinationViewController;
+    if (detailVC != nil) {
+        UICollectionViewCell *cell = (UICollectionViewCell *)sender;
+        NSIndexPath *indexPath = [_collectView indexPathForCell:cell];
+        
+        FollowerInfo *currentItem = [followerInfo objectAtIndex:indexPath.row];
+        
+        detailVC.currentItem = currentItem;
+    }
 }
 
 

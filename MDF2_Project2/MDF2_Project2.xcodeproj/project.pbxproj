@@ -438,6 +438,7 @@
 				28D7D4331A8D1FC500F02E80 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		28D7D4341A8D1FC500F02E80 /* Build configuration list for PBXNativeTarget "MDF2_Project2Tests" */ = {
 			isa = XCConfigurationList;
@@ -446,6 +447,7 @@
 				28D7D4361A8D1FC500F02E80 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
